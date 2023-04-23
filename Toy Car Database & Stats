@@ -1,0 +1,26 @@
+--Create a toy car database
+
+CREATE TABLE cars (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, fastest INTEGER);
+
+INSERT INTO cars VALUES (1, "A", 10, 15);
+INSERT INTO cars VALUES (2, "B", 11, 14);
+INSERT INTO cars VALUES (3, "C", 12, 13);
+INSERT INTO cars VALUES (4, "D", 13, 12);
+INSERT INTO cars VALUES (5, "E", 14, 11);
+INSERT INTO cars VALUES (6, "A1", 15, 10);
+INSERT INTO cars VALUES (7, "A2", 16, 9);
+INSERT INTO cars VALUES (8, "A3", 17, 8);
+INSERT INTO cars VALUES (9, "A4", 18, 7);
+INSERT INTO cars VALUES (10, "A5", 19, 6);
+INSERT INTO cars VALUES (11, "B1", 20, 5);
+INSERT INTO cars VALUES (12, "B2", 21, 4);
+INSERT INTO cars VALUES (13, "B3", 22, 3);
+INSERT INTO cars VALUES (14, "B4", 23, 2);
+INSERT INTO cars VALUES (15, "B5", 24, 1);
+
+--which toy car is the fastest?
+SELECT * FROM cars ORDER BY fastest;
+
+--display the database orded by price
+SELECT * FROM cars 
+ORDER BY price desc;
