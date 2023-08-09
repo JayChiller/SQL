@@ -1,0 +1,36 @@
+CREATE TABLE artists (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    age INTEGER);
+    
+INSERT INTO artists (name, age) VALUES ("Bobby", "40");
+INSERT INTO artists (name, age) VALUES ("Lucy", "25");
+INSERT INTO artists (name, age) VALUES ("Bailey", "35");
+INSERT INTO artists (name, age) VALUES ("Shelly", "56");
+INSERT INTO artists (name, age) VALUES ("Fiona", "19");
+INSERT INTO artists (name, age) VALUES ("Jan", "22");
+INSERT INTO artists (name, age) VALUES ("Trey", "23");
+INSERT INTO artists (name, age) VALUES ("Mark", "32");
+
+CREATE TABLE locations (
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id1 INTEGER,
+    name TEXT);
+    
+INSERT INTO locations (person_id1, name) VALUES ("1", "Los Angeles");
+INSERT INTO locations (person_id1, name) VALUES ("2", "Paris");
+INSERT INTO locations (person_id1, name) VALUES ("3", "Denver");
+INSERT INTO locations (person_id1, name) VALUES ("4", "Los Angeles");
+INSERT INTO locations (person_id1, name) VALUES ("5", "Detroit");
+INSERT INTO locations (person_id1, name) VALUES ("6", "Detroit");
+INSERT INTO locations (person_id1, name) VALUES ("7", "Athens");
+INSERT INTO locations (person_id1, name) VALUES ("8", "Seattle");
+
+CREATE TABLE genre ( 
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    name TEXT);
+    
+SELECT a.name, l.name FROM artists a
+JOIN locations l
+ON a.id=l.person_id1;
